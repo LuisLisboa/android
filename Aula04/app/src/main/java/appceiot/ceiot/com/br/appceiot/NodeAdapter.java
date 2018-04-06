@@ -102,10 +102,12 @@ public class NodeAdapter extends RecyclerView.Adapter<NodeAdapter.ViewHolder> {
 
         //Declaração dos elementos  em tela a serem apresentados para cada item.
         public TextView mTextView;
+        public TextView mTextView2;
 
         public ViewHolder(View itemView) {
             super(itemView);
             mTextView = itemView.findViewById(R.id.item_node_nome);
+            mTextView2 = itemView.findViewById(R.id.item_node_desc);
             itemView.setOnClickListener(this);
         }
 
@@ -115,6 +117,7 @@ public class NodeAdapter extends RecyclerView.Adapter<NodeAdapter.ViewHolder> {
          */
         void bind(Node node) {
             this.mTextView.setText(node.getNome());
+            this.mTextView2.setText(node.getDescricao());
         }
 
         /**

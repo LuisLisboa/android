@@ -30,7 +30,7 @@ package appceiot.ceiot.com.br.appceiot;
  *
  * Para leitura:
  * https://ceiot-android-app.firebaseio.com/nodes.json?orderBy="nome"&equalTo="Node1"
- * https://ceiot-android-app.firebaseio.com/nodes.json
+ * https://ceiot-android-app.firebaseio.com/nodes.json?
  *
  * https://firebase.google.com/docs/database/rest/retrieve-data?authuser=0
  */

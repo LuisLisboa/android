@@ -94,7 +94,7 @@ public class NodeActivity extends AppCompatActivity {
 
     public void goToWeb() {
         //Cria URI
-        String addressString = "https://www.google.com/";
+        String addressString = "https://www.remot.co/";
         Uri uri = Uri.parse(addressString);
 
         //Direciona  para o navegador

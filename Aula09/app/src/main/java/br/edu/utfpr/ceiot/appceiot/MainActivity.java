@@ -41,9 +41,8 @@ public class MainActivity extends AppCompatActivity
     private NodeAdapter mAdapter;
 
     //TODO (35) Declaração do BroadcastReceiver
-//    ChargingBroadcastReceiver mChargingRece
-// iver;
-//    IntentFilter mChargingIntentFilter;
+    ChargingBroadcastReceiver mChargingReceiver;
+    IntentFilter mChargingIntentFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,10 +102,10 @@ public class MainActivity extends AppCompatActivity
         NodeFirebaseJobServiceUtil.schedule(this);
 
         //TODO (35) Inicialização do broadcastreceiver
-//        mChargingIntentFilter = new IntentFilter();
-//        mChargingReceiver = new ChargingBroadcastReceiver();
-//        mChargingIntentFilter.addAction(Intent.ACTION_POWER_CONNECTED);
-//        mChargingIntentFilter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+        mChargingIntentFilter = new IntentFilter();
+        mChargingReceiver = new ChargingBroadcastReceiver();
+        mChargingIntentFilter.addAction(Intent.ACTION_POWER_CONNECTED);
+        mChargingIntentFilter.addAction(Intent.ACTION_POWER_DISCONNECTED);
     }
 
     @Override
